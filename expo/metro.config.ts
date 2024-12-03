@@ -1,5 +1,14 @@
-import { getDefaultConfig } from 'expo/metro-config';
+import { getDefaultConfig } from 'expo/metro-config'
 
-const config = getDefaultConfig(__dirname);
+/** @type {import('expo/metro-config').MetroConfig} */
+const config = getDefaultConfig(__dirname, {
+  isCSSEnabled: true,
+})
 
-module.exports = config;
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const { withTamagui } = require('@tamagui/metro-plugin')
+module.exports = withTamagui(config, {
+  components: ['tamagui'],
+  config: './tamagui.config.ts',
+  outputCSS: './tamagui-web.css',
+})
