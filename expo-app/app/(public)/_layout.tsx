@@ -4,8 +4,8 @@ import React from 'react'
 export default function PublicLayout() {
   return (
     <Stack>
-      <Stack.Screen name='login' />
       <Stack.Screen name='signup' />
+      <Stack.Screen name='login' />
       <Stack.Screen name='forgotPassword' />
     </Stack>
   )

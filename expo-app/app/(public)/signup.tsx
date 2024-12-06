@@ -1,11 +1,10 @@
-// landing page
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Home() {
+export default function Signup() {
   return (
     <View>
-      <Text>Home Page</Text>
+      <Text>Signup Page</Text>
     </View>
   )
 }
