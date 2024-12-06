@@ -14,7 +14,6 @@ import { useFonts } from 'expo-font'
 import { tamaguiConfig } from '../tamagui.config'
 
 export default function RootLayout() {
-
   const colorScheme = useColorScheme()
   const [loaded] = useFonts({
     Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
@@ -23,11 +22,18 @@ export default function RootLayout() {
   if (!loaded) {
     return null
   }
-  
+
   return (
     <TamaguiProvider config={tamaguiConfig} defaultTheme={colorScheme!}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack>
+        <Stack
+          screenOptions={{
+            headerShown: false,
+            contentStyle: {
+              backgroundColor: 'transparent',
+            },
+          }}
+        >
           <Stack.Screen name='(public)' />
           <Stack.Screen name='(auth)' />
         </Stack>
