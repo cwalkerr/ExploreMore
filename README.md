@@ -31,19 +31,16 @@ ExploreMore is a travel itinerary app designed to enhance your city breaks, road
 - **[Expo](https://expo.dev/)**: For streamlined React Native development.
 - **React Native**: For building the cross-platform mobile app.
 
-### **Backend**
-- **[Vercel](https://vercel.com/)**: Backend API functions deployed as serverless endpoints.
-
-### **Authentication & Notifications**
-- **[Firebase](https://firebase.google.com/)**:
-  - Authentication for user management.
-  - Notifications to keep users updated on their schedules.
-  - Real-Time Storage for collaborative itinerary updates.
-
-### **Database**
-- **PostgreSQL**:
-  Storing user data, itineraries, photos, notes, and public itineraries.
-
+### **Backend Provider**
+- **[Supabase](https://supabase.com/)**:
+  - Serverless edge functions for fast API communication
+  - Authentication
+  - PostgreSQL database to store user data, itineraries, notes, and public itineraries
+  - Object storage for media files
+    
+### **Notifications**
+- **[Firebase](https://firebase.google.com/)**:  To keep users updated on their schedules.
+  
 ### **APIs**
 - **[Google Maps Platform](https://cloud.google.com/maps-platform/)**:
   - For maps, directions, and route planning.
@@ -59,7 +56,7 @@ ExploreMore is a travel itinerary app designed to enhance your city breaks, road
 
 ## **Roadmap**
 ### **Current Development**
-- User authentication with Firebase.
+- User authentication with Supabase.
 - Basic itinerary creation and storage.
 - Integration with Google Maps SDK for route visualization.
 
